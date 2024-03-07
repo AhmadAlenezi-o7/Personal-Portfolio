@@ -9,9 +9,17 @@ body, h1, h2, p {
     padding: 0;
     font-family: 'Eurostile', sans-serif; /* Set Eurostile as the font */
 }
+
+h1 {
+    font-size: 5em; 
+    padding: 2em; 
+    font-weight: bold
+}
+
 p {
   margin-bottom: 1em;
 }
+
 a { text-decoration: none; color:initial; }
 
 .container {
@@ -41,19 +49,20 @@ header {
 }
 
 footer {
-    background-color: #343a40;
-    color: #fff;
+    /* background-color: #343a40;
+    color: #fff; */
     text-align: center;
     padding: 20px 0;
 }
 
 /* Media Queries for responsiveness */
-@media (min-width: 768px) {
-    .header h1 {
+@media only screen and (max-width: 768px) {
+    header h1 {
         font-size: 2.5em;
+        padding: 1em;
     }
 
-    .header h2 {
+    header h2 {
         font-size: 1.5em;
     }
 
