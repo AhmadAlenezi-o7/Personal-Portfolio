@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Eurostile';
+    src: url('../assets/fonts/eurostile.ttf') format('truetype');
+}
+
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Eurostile', sans-serif; /* Set Eurostile as the font */
+}
+p {
+  margin-bottom: 1em;
+}
+a { text-decoration: none; color:initial; }
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.about {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+.projects {
+    padding: 40px 0;
+}
+
+.projects .project {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Media Queries for responsiveness */
+@media (min-width: 768px) {
+    .header h1 {
+        font-size: 2.5em;
+    }
+
+    .header h2 {
+        font-size: 1.5em;
+    }
+
+    .container {
+        padding: 0 40px;
+    }
+}
+
+/* Add more media queries for larger screen sizes if needed */
