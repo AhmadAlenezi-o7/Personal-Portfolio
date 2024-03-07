@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Eurostile';
-    src: url('../assets/fonts/eurostile.ttf') format('truetype');
+    src: url('../assets/fonts/eurostile-webfont.woff') format('truetype');
 }
 
 /* Reset some default styles */
