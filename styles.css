@@ -3,21 +3,46 @@
     src: url('../assets/fonts/eurostile-webfont.woff') format('truetype');
 }
 
-/* Reset some default styles */
+:root {
+    --primary-color: rgb(165, 126, 100);
+    --secondary-color: rgb(179, 151, 133);
+    --body-color: grey;
+    --accent-color: rgb(214, 185, 165);
+}
+
+body {
+    background: hsla(36, 31%, 90%, 1);
+    /* background: rgb(240,108,180);
+    background: -moz-linear-gradient(20deg, rgba(240,108,180,1) 0%, rgba(255,196,156,1) 70%);
+    background: -webkit-linear-gradient(20deg, rgba(240,108,180,1) 0%, rgba(255,196,156,1) 70%);
+    background: linear-gradient(20deg, rgba(240,108,180,1) 0%, rgba(255,196,156,1) 70%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f06cb4",endColorstr="#ffc49c",GradientType=1); */
+}
+
 body, h1, h2, p {
     margin: 0;
     padding: 0;
-    font-family: 'Eurostile', sans-serif; /* Set Eurostile as the font */
+    font-family:  "gt", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Set Eurostile as the font */
+    /* font-size: clamp(1rem, .8852rem + .4898vw, 1.375rem); */
 }
 
 h1 {
-    font-size: 5em; 
-    padding: 2em; 
-    font-weight: bold
+    font-size: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem); 
+    letter-spacing: -4px;
+    color: rgb(165, 126, 100);
+    color: linear-gradient(12deg, rgba(240,108,180,1) 0%, rgba(255,196,156,1) 68%);
+    ;
+    padding: 12rem 0 3rem;
+    /* font-weight: bold */
 }
 
 p {
-  margin-bottom: 1em;
+    font-size: clamp(1rem, .8852rem + .4898vw, 1.375rem);
+    color: var(--secondary-color);
+    margin-bottom: 1em;
+    line-height: 150%;
+    margin: 0;
+    padding: 0;
 }
 
 a { text-decoration: none; color:initial; }
@@ -25,16 +50,19 @@ a { text-decoration: none; color:initial; }
 .container {
     max-width: 960px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 3rem;
+    background: whitesmoke;
+    border-radius: 70px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 header {
     text-align: center;
-    padding: 40px 0;
+    /* padding: 40px 0; */
 }
 
 .about {
-    background-color: #f8f9fa;
+    /* background-color: var(--accent-color); */
     padding: 40px 0;
 }
 
@@ -43,7 +71,7 @@ header {
 }
 
 .projects .project {
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
     padding: 20px;
     margin-bottom: 20px;
 }
