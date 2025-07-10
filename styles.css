@@ -204,30 +204,23 @@ section {
     line-height: 1.7;
 }
 
-.about-stats {
+.about-image {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
-.stat {
-    text-align: center;
-    padding: 1.5rem;
-    background: white;
+.portrait {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.stat h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #2563eb;
-    margin-bottom: 0.5rem;
-}
-
-.stat p {
-    color: #64748b;
-    font-weight: 500;
+.portrait:hover {
+    transform: scale(1.05);
 }
 
 /* Skills Section */
@@ -282,6 +275,61 @@ section {
 /* Projects Section */
 .projects {
     background: #f8fafc;
+}
+
+/* Project Tabs */
+.project-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.tab-btn {
+    padding: 12px 24px;
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    color: #64748b;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.tab-btn:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+    transform: translateY(-2px);
+}
+
+.tab-btn.active {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.2;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .projects-grid {
@@ -447,6 +495,14 @@ section {
         gap: 2rem;
     }
     
+    .about-image {
+        order: -1;
+    }
+    
+    .portrait {
+        max-width: 250px;
+    }
+    
     .about-stats {
         flex-direction: row;
         justify-content: space-around;
@@ -469,6 +525,15 @@ section {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
+    }
+    
+    .project-tabs {
+        gap: 0.5rem;
+    }
+    
+    .tab-btn {
+        padding: 10px 16px;
+        font-size: 0.8rem;
     }
 }
 
@@ -497,5 +562,16 @@ section {
     
     .about-stats {
         flex-direction: column;
+    }
+    
+    .project-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
     }
 }
